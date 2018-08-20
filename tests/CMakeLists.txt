@@ -16,6 +16,8 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 
+include_directories(${PROJECT_SOURCE_DIR}/tests/include)
+
 # Trivial example using gtest and gmock
 add_executable(simulator_test
         ${PROJECT_SOURCE_DIR}/tests/src/simulatorTest.cpp
