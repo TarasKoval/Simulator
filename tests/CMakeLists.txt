@@ -20,6 +20,7 @@ add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 add_executable(simulator_test
         ${PROJECT_SOURCE_DIR}/tests/src/simulatorTest.cpp
         ${PROJECT_SOURCE_DIR}/src/functions.cpp
+        ${PROJECT_SOURCE_DIR}/src/controller.cpp
         include/mockSimulator.h
         )
 
