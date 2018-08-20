@@ -18,9 +18,9 @@ add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 
 # Trivial example using gtest and gmock
 add_executable(simulator_test
-        ${PROJECT_SOURCE_DIR}/tests/src/math_test.cpp
+        ${PROJECT_SOURCE_DIR}/tests/src/simulatorTest.cpp
         ${PROJECT_SOURCE_DIR}/src/functions.cpp
-        ../include/mockSimulator.h
+        include/mockSimulator.h
         )
 
 target_link_libraries(simulator_test

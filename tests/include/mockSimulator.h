@@ -2,6 +2,7 @@
 #include "simulator.h"
 
 class MockSimulator : public Simulator {
+public:
     MOCK_METHOD2(getOutdoorMeasurments, void(std::vector<int>
             &measurements,
             const size_t &maxSize));
