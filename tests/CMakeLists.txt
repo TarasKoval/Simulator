@@ -21,7 +21,6 @@ add_executable(simulator_test
         ${PROJECT_SOURCE_DIR}/tests/src/simulatorTest.cpp
         ${PROJECT_SOURCE_DIR}/src/functions.cpp
         ${PROJECT_SOURCE_DIR}/src/controller.cpp
-        include/mockSimulator.h
         )
 
 target_link_libraries(simulator_test

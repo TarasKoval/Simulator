@@ -3,13 +3,12 @@ project(simulator)
 
 set(CMAKE_CXX_STANDARD 11)
 
+option(TESTS "Turn Tests On and Off" ON)
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-set(SOURCES
-        ${PROJECT_SOURCE_DIR}/src/main.cpp
-        ${PROJECT_SOURCE_DIR}/src/functions.cpp
-        ${PROJECT_SOURCE_DIR}/include/simulator.h include/controller.h src/controller.cpp)
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-
-add_subdirectory(tests)
+if (TESTS MATCHES ON)
+    add_subdirectory(tests)
+endif ()
