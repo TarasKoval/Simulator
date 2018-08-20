@@ -29,5 +29,5 @@ target_link_libraries(simulator_test
 if (CodeCoverage MATCHES ON)
     set(CMAKE_CXX_FLAGS "-O0 -g -fprofile-arcs -ftest-coverage ")
     include(CodeCoverage)
-    setup_target_for_coverage(math_test_coverage simulator_test coverage)
+    setup_target_for_coverage(coverage simulator_test coverage)
 endif ()
