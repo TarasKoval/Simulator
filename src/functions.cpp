@@ -1,5 +1,11 @@
 #include "functions.h"
 
+double arithmeticMean(const std::vector<int> &inputData) {
+    double sum = std::accumulate(inputData.begin(), inputData.end(), 0.0);
+    double mean = sum / inputData.size();
+    return mean;
+}
+
 double mathExpectation(const std::vector<ulong> &inputData, unsigned long gapPosition) {
     double mathematicalExpectation = 0;
     double temp = 0;
@@ -143,3 +149,4 @@ bool fullCheck(const std::vector<ulong> &perfectData, const std::vector<ulong> &
         return false;
     }
 }
+

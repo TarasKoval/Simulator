@@ -8,6 +8,8 @@
 #include <array>
 #include <algorithm>
 
+double arithmeticMean(const std::vector<int> &inputData);
+
 double mathExpectation(const std::vector<ulong> &inputData, unsigned long gapPosition);
 
 double mathExpectation(const std::vector<ulong> &inputData);

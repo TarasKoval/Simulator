@@ -3,11 +3,11 @@
 
 class MockSimulator : public Simulator {
 public:
-    MOCK_METHOD2(getOutdoorMeasurments, void(std::vector<int>
+    MOCK_METHOD2(getOutdoorTemperatureLog, void(std::vector<int>
             &measurements,
             const size_t &maxSize));
 
-    MOCK_METHOD2(getInteriorMeasurments, void(std::vector<int>
+    MOCK_METHOD2(getIndoorTemperatureLog, void(std::vector<int>
             &measurements,
             const size_t &maxSize));
 

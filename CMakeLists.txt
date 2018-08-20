@@ -8,7 +8,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 set(SOURCES
         ${PROJECT_SOURCE_DIR}/src/main.cpp
         ${PROJECT_SOURCE_DIR}/src/functions.cpp
-        ${PROJECT_SOURCE_DIR}/include/simulator.h)
+        ${PROJECT_SOURCE_DIR}/include/simulator.h include/controller.h src/controller.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
