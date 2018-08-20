@@ -11,6 +11,6 @@ public:
             &measurements,
             const size_t &maxSize));
 
-    MOCK_METHOD1(setInteriorControl, bool(unsigned int
-            controlCode));
+    MOCK_METHOD1(setInteriorControl, bool(double
+            temperatureChange));
 };

@@ -15,7 +15,7 @@ public:
     // Set new control value for interior controller.
     // Zero input value means "turn off".
     // Return is the actual value valid.
-    virtual bool setInteriorControl(unsigned int controlCode) = 0;
+    virtual bool setInteriorControl(double temperatureChange) = 0;
 };
 
 
