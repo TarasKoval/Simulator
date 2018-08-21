@@ -6,13 +6,13 @@ int arithmeticMean(const std::vector<int> &inputData) {
     return mean;
 }
 
-int addControlCodeToNumber(int number, unsigned int controlCode) {
-    int returnValue = number * 10 + controlCode;
+unsigned int addControlCodeToNumber(unsigned int number, unsigned int controlCode) {
+    unsigned int returnValue = number * 10 + controlCode;
     return returnValue;
 }
 
-int removeControlCodeFromNumber(int &number) {
-    int controlCode = number % 10;
+unsigned int removeControlCodeFromNumber(unsigned int &number) {
+    unsigned int controlCode = number % 10;
     number = (number - controlCode) / 10;
     return controlCode;
 }

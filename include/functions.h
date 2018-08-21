@@ -10,8 +10,8 @@
 
 int arithmeticMean(const std::vector<int> &inputData);
 
-int addControlCodeToNumber(int number, unsigned int controlCode);
+unsigned int addControlCodeToNumber(unsigned int number, unsigned int controlCode);
 
-int removeControlCodeFromNumber(int &number);
+unsigned int removeControlCodeFromNumber(unsigned int &number);
 
 #endif //RRORELCALC_FUNCTIONS_H

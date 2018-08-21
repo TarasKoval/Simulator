@@ -4,19 +4,20 @@
 #include <vector>
 #include <cstdlib>
 
-class Simulator {
-public:
-    virtual ~Simulator() = default;
+namespace outdoor {
+    class ISimulator {
+    public:
+        virtual ~ISimulator() = default;
 
-    virtual void getOutdoorTemperatureLog(std::vector<int> &measurements, const size_t &maxSize) = 0;
+        virtual void getOutdoorMeasurments(std::vector<int> &measurements, const size_t &maxSize) = 0;
 
-    virtual void getIndoorTemperatureLog(std::vector<int> &measurements, const size_t &maxSize) = 0;
+        virtual void getInteriorMeasurments(std::vector<int> &measurements, const size_t &maxSize) = 0;
 
-    // Set new control value for interior controller.
-    // Zero input value means "turn off".
-    // Return is the actual value valid.
-    virtual bool setInteriorControl(double temperatureChange) = 0;
-};
-
+        // Set new control value for interior controller.
+        // Zero input value means "turn off".
+        // Return is the actual value valid.
+        virtual bool setInteriorControl(unsigned int controlCode) = 0;
+    };
+}//namespace outdoor
 
 #endif//OUTDOOR_SIMULATOR_H

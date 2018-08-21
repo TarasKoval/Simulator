@@ -5,13 +5,13 @@
 
 class Controller {
 private:
-    Simulator *simulator;
+    outdoor::ISimulator *simulator;
     size_t logSize;
     std::vector<int> outdoorTemperatureLog;
     std::vector<int> indoorTemperatureLog;
 
 public:
-    explicit Controller(Simulator *rhsSimulator);
+    explicit Controller(outdoor::ISimulator *rhsSimulator);
 
     ~Controller();
 
