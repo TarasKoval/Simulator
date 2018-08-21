@@ -6,8 +6,8 @@ Controller::Controller(outdoor::ISimulator *rhsSimulator) : simulator(rhsSimulat
 Controller::~Controller() {}
 
 void Controller::minimizeTemperatureDifference() {
-    simulator->getOutdoorMeasurments(outdoorTemperatureLog, logSize);
-    simulator->getInteriorMeasurments(indoorTemperatureLog, logSize);
+    simulator->getOutdoorMeasurements(outdoorTemperatureLog, logSize);
+    simulator->getInteriorMeasurements(indoorTemperatureLog, logSize);
 
     auto outdoorTemperature = arithmeticMean(outdoorTemperatureLog);
     auto indoorTemperature = arithmeticMean(indoorTemperatureLog);

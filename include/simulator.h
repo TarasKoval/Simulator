@@ -9,9 +9,9 @@ namespace outdoor {
     public:
         virtual ~ISimulator() = default;
 
-        virtual void getOutdoorMeasurments(std::vector<int> &measurements, const size_t &maxSize) = 0;
+        virtual void getOutdoorMeasurements(std::vector<int> &measurements, const size_t &maxSize) = 0;
 
-        virtual void getInteriorMeasurments(std::vector<int> &measurements, const size_t &maxSize) = 0;
+        virtual void getInteriorMeasurements(std::vector<int> &measurements, const size_t &maxSize) = 0;
 
         // Set new control value for interior controller.
         // Zero input value means "turn off".
