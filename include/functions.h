@@ -8,7 +8,7 @@
 #include <array>
 #include <algorithm>
 
-double arithmeticMean(const std::vector<int> &inputData);
+int arithmeticMean(const std::vector<int> &inputData);
 
 int addControlCodeToNumber(int number, unsigned int controlCode);
 

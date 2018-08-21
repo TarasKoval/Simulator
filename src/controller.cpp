@@ -13,9 +13,9 @@ void Controller::minimizeTemperatureDifference() {
     auto indoorTemperature = arithmeticMean(indoorTemperatureLog);
 
     auto temperatureDifference = outdoorTemperature - indoorTemperature;
-    if (temperatureDifference >= 0) {
-        simulator->setInteriorControl(temperatureDifference);
-    } else {
-        simulator->setInteriorControl(temperatureDifference * -1);
+    if (temperatureDifference > 0) {
+        simulator->setInteriorControl(addControlCodeToNumber(temperatureDifference, 2));
+    } else if (temperatureDifference < 0) {
+        simulator->setInteriorControl(addControlCodeToNumber(temperatureDifference, 1));
     }
 }

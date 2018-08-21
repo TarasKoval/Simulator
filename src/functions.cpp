@@ -1,8 +1,8 @@
 #include "functions.h"
 
-double arithmeticMean(const std::vector<int> &inputData) {
-    double sum = std::accumulate(inputData.begin(), inputData.end(), 0.0);
-    double mean = sum / inputData.size();
+int arithmeticMean(const std::vector<int> &inputData) {
+    int sum = std::accumulate(inputData.begin(), inputData.end(), 0);
+    int mean = sum / static_cast<int>(inputData.size());
     return mean;
 }
 

@@ -2,7 +2,7 @@
 #define OUTDOOR_SIMULATOR_H
 
 #include <vector>
-#include <cstdio>
+#include <cstdlib>
 
 class Simulator {
 public:
