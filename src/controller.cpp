@@ -3,7 +3,7 @@
 
 Controller::Controller(outdoor::ISimulator *rhsSimulator) : simulator(rhsSimulator), logSize(16) {}
 
-Controller::~Controller() {}
+Controller::~Controller() = default;
 
 void Controller::minimizeTemperatureDifference() {
     simulator->getOutdoorMeasurements(outdoorTemperatureLog, logSize);
@@ -14,8 +14,8 @@ void Controller::minimizeTemperatureDifference() {
 
     auto temperatureDifference = outdoorTemperature - indoorTemperature;
     if (temperatureDifference > 0) {
-        simulator->setInteriorControl(addControlCodeToNumber(temperatureDifference, 2));
+        simulator->setInteriorControl(addControlCodeToNumber(static_cast<unsigned int>(temperatureDifference), 2));
     } else if (temperatureDifference < 0) {
-        simulator->setInteriorControl(addControlCodeToNumber(abs(temperatureDifference), 1));
+        simulator->setInteriorControl(addControlCodeToNumber(static_cast<unsigned int>(abs(temperatureDifference)), 1));
     }
 }
