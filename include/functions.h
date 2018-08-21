@@ -1,5 +1,5 @@
-#ifndef RRORELCALC_FUNCTIONS_H
-#define RRORELCALC_FUNCTIONS_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
 #include <vector>
 #include <zconf.h>
@@ -14,4 +14,4 @@ unsigned int addControlCodeToNumber(unsigned int number, unsigned int controlCod
 
 unsigned int removeControlCodeFromNumber(unsigned int &number);
 
-#endif //RRORELCALC_FUNCTIONS_H
+#endif //FUNCTIONS_H

@@ -1,5 +1,5 @@
-#ifndef SIMULATOR_CONTROLER_H
-#define SIMULATOR_CONTROLER_H
+#ifndef SIMULATOR_CONTROLLER_H
+#define SIMULATOR_CONTROLLER_H
 
 #include "simulator.h"
 
@@ -18,4 +18,4 @@ public:
     void minimizeTemperatureDifference();
 };
 
-#endif //SIMULATOR_CONTROLER_H
+#endif //SIMULATOR_CONTROLLER_H
